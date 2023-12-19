@@ -391,7 +391,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
@@ -487,48 +487,48 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Aux Power",
-        "pattern": "/Auxilliaries/Aux_input_L"
+        "netclass": "High Power",
+        "pattern": "AC_IN_L"
       },
       {
         "netclass": "High Power",
-        "pattern": "/Auxilliaries/Aux_input_N"
+        "pattern": "/AC__IN_L"
       },
       {
-        "netclass": "Aux Power",
-        "pattern": "/Auxilliaries/RectifiedOut+"
+        "netclass": "High Power",
+        "pattern": "/AC_IN_N"
       },
       {
         "netclass": "High Power",
         "pattern": "GND"
       },
       {
-        "netclass": "Aux Power",
-        "pattern": "/Auxilliaries/Aux_out"
+        "netclass": "High Power",
+        "pattern": "/30V+"
       },
       {
         "netclass": "High Power",
-        "pattern": "/Rectifier Module/AC_L"
-      },
-      {
-        "netclass": "High Power",
-        "pattern": "/LM317_Module/RectifiedOut+"
-      },
-      {
-        "netclass": "High Power",
-        "pattern": "/LM317_Module/RectifiedOut-"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "/Rectifier Module/LED"
-      },
-      {
-        "netclass": "High Power",
-        "pattern": "/Rectifier Module/AC_N"
+        "pattern": "/30V-"
       },
       {
         "netclass": "Aux Power",
-        "pattern": "/LM317_Module/Reg_Out"
+        "pattern": "/Aux_input_L"
+      },
+      {
+        "netclass": "Aux Power",
+        "pattern": "/Aux_input_N"
+      },
+      {
+        "netclass": "Aux Power",
+        "pattern": "/12V-"
+      },
+      {
+        "netclass": "Aux Power",
+        "pattern": "/12V+"
+      },
+      {
+        "netclass": "Aux Power",
+        "pattern": "/Aux_out"
       }
     ]
   },
