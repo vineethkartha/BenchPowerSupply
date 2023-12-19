@@ -25,3 +25,7 @@ fp-info-cache
 *.csv
 
 BenchPowerSupply-backups/
+
+RectifierModule/RectifierModule-backups/
+
+VariableSupplyModule/VariableSupplyModule-backups/

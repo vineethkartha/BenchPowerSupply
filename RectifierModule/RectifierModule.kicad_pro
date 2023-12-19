@@ -48,7 +48,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -165,8 +171,16 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
-      "via_dimensions": [],
+      "track_widths": [
+        0.0,
+        2.5
+      ],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "layer_presets": [],
@@ -392,7 +406,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "BenchPowerSupply.kicad_pro",
+    "filename": "RectifierModule.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -415,7 +429,7 @@
         "wire_width": 6
       },
       {
-        "bus_width": 12,
+        "bus_width": 59,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -426,13 +440,13 @@
         "name": "Aux Power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
+        "track_width": 1.5,
         "via_diameter": 0.8,
         "via_drill": 0.4,
-        "wire_width": 39
+        "wire_width": 6
       },
       {
-        "bus_width": 12,
+        "bus_width": 118,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -443,13 +457,13 @@
         "name": "High Power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
+        "track_width": 3.0,
         "via_diameter": 0.8,
         "via_drill": 0.4,
-        "wire_width": 118
+        "wire_width": 6
       },
       {
-        "bus_width": 12,
+        "bus_width": 39,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -460,10 +474,10 @@
         "name": "Signal",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
+        "track_width": 1.0,
         "via_diameter": 0.8,
         "via_drill": 0.4,
-        "wire_width": 30
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -473,8 +487,48 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Default",
-        "pattern": ""
+        "netclass": "Aux Power",
+        "pattern": "/Auxilliaries/Aux_input_L"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "/Auxilliaries/Aux_input_N"
+      },
+      {
+        "netclass": "Aux Power",
+        "pattern": "/Auxilliaries/RectifiedOut+"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Aux Power",
+        "pattern": "/Auxilliaries/Aux_out"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "/Rectifier Module/AC_L"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "/LM317_Module/RectifiedOut+"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "/LM317_Module/RectifiedOut-"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/Rectifier Module/LED"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "/Rectifier Module/AC_N"
+      },
+      {
+        "netclass": "Aux Power",
+        "pattern": "/LM317_Module/Reg_Out"
       }
     ]
   },
@@ -527,18 +581,6 @@
     [
       "85225bbb-a12f-4483-ac90-767368bd8ae2",
       ""
-    ],
-    [
-      "9b8d7c27-79f7-4e99-bbc7-0ac7c4016791",
-      "LM317_Module"
-    ],
-    [
-      "eccd6a13-cab4-4dd0-a5ba-dea4375f28d6",
-      "Rectifier Module"
-    ],
-    [
-      "9a339c22-c169-4e35-a868-5e3d4b41d15e",
-      "Auxilliaries"
     ]
   ],
   "text_variables": {}
