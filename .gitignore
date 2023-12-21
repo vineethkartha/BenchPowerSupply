@@ -29,3 +29,7 @@ BenchPowerSupply-backups/
 RectifierModule/RectifierModule-backups/
 
 VariableSupplyModule/VariableSupplyModule-backups/
+
+*.ini
+
+RectifierModule/RectifierModule.round-tracks-config
